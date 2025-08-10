@@ -61,6 +61,15 @@ body {
 p {
     font-size: 2rem;
 }
+.link-button {
+    text-decoration: none;
+    color: black;
+    border: 1px solid hsl(0, 0%, 0%);
+    background-color: #f2f2f2;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 2px 3px #888888;
+}
 
 /* ========== CHAR IMG ========== */
 
