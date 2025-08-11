@@ -5,35 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="buscar.css">
     <script src="script.js" defer></script>
-    <title>DRAGON BALL</title>
+    <title>Dragon Ball Web - Buscar</title>
 </head>
 
 <body>
+    <header>
+        <img class="header-logo" src="img/Dragon_Ball_Z_Logo_A.png" alt="logo de Dragon Ball Z">
+    </header>
     <div class="container">
-        <header>
-            <h1>Buscá tu personaje de Dragon Ball</h1>
-            <input type="text" placeholder="Nombre de personaje">
-            <button id="searchBtn">Buscar</button>
-        </header>
-        <main class="container">
-            <h2 id="charName"></h2>
+        <div class="search-container">
+            <div class="search-char">
+                <input type="text" placeholder="Nombre de personaje">
+                <button id="searchBtn">Buscar</button>
+            </div>
+            <a href="index.html" title="inicio" class="link-button">Volver al inicio</a>
+        </div>
 
-            <section class="info">
-                <p id="desc"></p>
-                <p id="gender"></p>
-                <p id="race"></p>
-                <p id="ki"></p>
-            </section>
-
-            <section class="char">
-                <img id="charImg" src="" alt="">
-            </section>
+        <main class="content">
+            <div class="char-result">
+                <div class="char-info">
+                    <h2 id="charName"></h2>
+                    <p id="desc"></p>
+                    <p id="gender"></p>
+                    <p id="race"></p>
+                    <p id="ki"></p>
+                </div>
+                <div class="char-img">
+                    <img id="charImg" src="" alt="">
+                </div>
+            </div>
         </main>
     </div>
-    <a href="index.html" title="VolverHome" class="link-button">Volver a home</a>
 </body>
-</html></html>
+</html>
