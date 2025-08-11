@@ -6,6 +6,7 @@ const desc = document.getElementById('desc');
 const gender = document.getElementById('gender');
 const race = document.getElementById('race');
 const ki = document.getElementById('ki');
+const charResult = document.querySelector('.char-result');
 
 
 btn.addEventListener('click', function() {
@@ -20,7 +21,6 @@ async function getCharData(charName){
     const url = `https://dragonball-api.com/api/characters?name=${charName}`
 
     try {
-
         const response = await fetch(url);
 
         if (!response.ok)
@@ -37,11 +37,17 @@ async function getCharData(charName){
             gender.textContent = `Género: ${character.gender}`;
             race.textContent = `Raza: ${character.race}`;
             ki.textContent = `Ki: ${character.ki}`;
-        } else
+
+            charResult.classList.remove('visible');
+            setTimeout(() => {
+                charResult.classList.add('visible');
+            }, 10);
+        } else {
+            charResult.classList.remove('visible');
             alert('No se encontró el personaje. Asegurate de ingresar el nombre correctamente.');
-
-
+        }
     } catch (error) {
-        console.log(response.status);
+        charResult.classList.remove('visible');
+        console.log(error);
     }
 }

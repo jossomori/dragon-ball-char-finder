@@ -1,0 +1,88 @@
+/* ========== RESET ========== */
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HEADER ========== */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.header-logo {
+    max-width: 25%;
+    width: 100%;
+    height: auto;
+}
+
+/* ========== BODY ========== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(0, 0%, 0%);
+}
+
+/* ========== CONTAINER ========== */
+
+main{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ========== LORE ========== */
+
+p {
+    font-size: 2rem;
+}
+
+.lorecontainer {
+    background-color: #d9d9d9;
+    margin: 1rem auto;
+    width: 90%;
+    border: 3px solid hsl(0, 0%, 0%);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s;
+}
+
+.lorecontainer:hover {
+    box-shadow: 0px 0px 15px rgba(0,0,0,1);
+}
+
+.link-button {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    background-color: #d9d9d9;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+    transition: box-shadow 0.2s;
+}
+
+.link-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}

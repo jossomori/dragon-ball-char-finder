@@ -15,24 +15,24 @@ html {
 /* ========== HEADER ========== */
 
 header {
-    margin: 0 auto;
-    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
 }
 
-input {
-    font-size: 2.5rem;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    max-width: 25vw;
+.header-logo {
+    max-width: 25%;
     width: 100%;
+    height: auto;
 }
 
 /* ========== BODY ========== */
 
 body {
     display: flex;
-    flex-direction: column; /* Main → Footer */
-    min-height: 100vh;  /* Footer al fondo */
+    flex-direction: column;
+    min-height: 100vh;
     background-color: hsl(0, 100%, 100%);
     color: hsl(0, 0%, 0%);
 }
@@ -41,12 +41,38 @@ body {
 
 .container{
     max-width: 1140px;
-    margin: 5rem auto;
+    margin: 0 auto;
     padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     gap: 4rem;
     display: flex;
     justify-content: center;
+}
+
+/* ========== SEARCH CONTAINER ========== */
+
+.search-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.search-char {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+}
+
+/* ========== INPUT ========== */
+
+input {
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    padding: 1rem;
+    max-width: 30vw;
 }
 
 /* ========== SECTIONS ========== */
@@ -63,36 +89,83 @@ body {
 p {
     font-size: 2rem;
 }
-.link-button {
-    text-decoration: none;
-    color: black;
-    border: 1px solid hsl(0, 0%, 0%);
-    background-color: #f2f2f2;
-    padding: 4px;
-    border-radius: 5px;
-    box-shadow: 2px 3px #888888;
+
+/* ========== CHAR DATA ========== */
+
+.char-result {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 0.5s;
+    min-height: 350px;
 }
 
-/* ========== CHAR IMG ========== */
+.char-result.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.char-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.char-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.char-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
 
 #charImg {
-    height: 500px;
+    max-height: 650px;
     width: auto;
     object-fit: contain;
 }
 
-/* ========== BUTTON ========== */
-button {
-    font-size: 2.5rem;
-    padding: 1rem 2rem;
-    border-radius: 1.5rem;
-    background-color: hsl(22, 100%, 50%);
-    color: hsl(218, 100%, 50%);
+/* ========== BUTTONS ========== */
+
+#searchBtn {
+    font-size: 2.25rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: #f85b20;
     cursor: pointer;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s;
+}
+
+#searchBtn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.link-button {
+    margin: 0 auto;
+    background-color: #d9d9d9;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+    transition: box-shadow 0.2s;
+}
+
+.link-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
